@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Careers</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style2.css" rel="stylesheet" media="screen">
+
+  
+
+    <script>
+    	var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-44110128-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+
+		  //dynamic gradient
+			var colors = new Array(
+  			  [41,170,93],
+			  [221,94,0],
+			  [221,159,20],
+			  [17,123,183],
+			  [119,58,147],
+			  [46,204,113],
+			  [230,126,34],
+			  [225,212,0],
+			  [52,152,219],
+			  [155,89,182]
+
+  			);
+
+			var step = 0;
+			//color table indices for: 
+			// current color left
+			// next color left
+			// current color right
+			// next color right
+			var colorIndices = [0,1,2,3];
+
+			//transition speed
+			var gradientSpeed = 0.006;
+
+			function updateGradient()
+			{
+			var c0_0 = colors[colorIndices[0]];
+			var c0_1 = colors[colorIndices[1]];
+			var c1_0 = colors[colorIndices[2]];
+			var c1_1 = colors[colorIndices[3]];
+
+			var istep = 1 - step;
+			var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+			var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+			var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+			var color1 = "#"+((r1 << 16) | (g1 << 8) | b1).toString(16);
+
+			var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+			var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+			var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+			var color2 = "#"+((r2 << 16) | (g2 << 8) | b2).toString(16);
+
+			 $('header').css({
+			   background: "-webkit-gradient(linear, left top, left bottom, from("+color1+"), to("+color2+"))"}).css({
+			    background: "-moz-linear-gradient(top, "+color1+" 0%, "+color2+" 100%, .5)", opacity:".5"});
+			  
+			  step += gradientSpeed;
+			  if ( step >= 1 )
+			  {
+			    step %= 1;
+			    colorIndices[0] = colorIndices[1];
+			    colorIndices[2] = colorIndices[3];
+			    
+			    //pick two new target color indices
+			    //do not pick the same as the current one
+			    colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+			    colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+			    
+			  }
+			}
+
+			setInterval(updateGradient,10);
+
+
+			//Twitter
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs") ;
+			
+
+			this.randomtip = function(){
+			var length = $("#tips li").length; // this is where we put the id of the list
+			var ran = Math.floor(Math.random()*length) + 1;
+			$("#tips li:nth-child(" + ran + ")").show();
+		};
+
+		
+
+    </script>
+      </head>
+  <body>
+
+ 	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+  			var js, fjs = d.getElementsByTagName(s)[0];
+  			if (d.getElementById(id)) return;
+  			js = d.createElement(s); js.id = id;
+  			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
+	  
+	  <!-- NAVBAR
+	      ================================================== -->
+	  <nav  id="damn" class="navbar navbar-default" role="navigation">
+	  	  
+			  <div class="navbar-header">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			      <span class="sr-only">Toggle navigation</span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			      <span class="icon-bar"></span>
+			    </button>
+			    
+			    <!--Replace text with your app name or logo image-->
+			    
+			  </div>
+			  <div id="shit" class="collapse navbar-collapse navbar-ex1-collapse">
+			    <ul class="nav navbar-nav">
+			      <li><a href="index.html">Back</a></li>
+			    </ul>
+			  </div>
+		 
+	  </nav>
+	  
+	  
+	   <!-- BODY
+	   ================================================== -->	  
+	  <header>
+		 <div class="container">
+			 <div id="job" class="row">
+
+				 <div class="col-md-12">
+					  <div class="carousel-iphone">
+					  	<div id="carousel-example-generic" class="carousel slide">
+					
+					    <div class="carousel-inner">
+					      <div class="item active">
+					        <img src="img/pic-1.png" alt="App Screen 1">
+					      </div>
+					      <div class="item">
+					        <img src="img/pic-2.png" alt="App Screen 2">
+					      </div>
+					      <div class="item">
+					        <img src="img/pic-3.png" alt="App Screen 3">
+					      </div>
+					      
+
+					    </div>
+					  </div>
+					</div>
+				</div>	  
+			</div>  
+
+		</div>
+
+	 </header>
+	  
+	  
+	  <!-- PURCHASE
+	      ================================================== -->
+	  <div class="applyjob">
+		  <div class="container">
+			  <div class="row">
+				
+				  <div class="col-md-offset-2 col-md-8">
+					 <h1 id="titile" style="color:#f63880; text-align: left">Back-end Engineer</h1>
+					 	    <p class="lead">Hykoo is looking to hire an experienced back-end engineer to help launch our ground-breaking mobile platform.</p>
+					 	    <br>
+					 	    <h4 style="text-align:left">About you:</h4>
+					 	    <ul class="job-description">
+					 	    <li class="description">You have worked on high-availability RESTful APIs that have served massive consumer-scale audiences.</li>
+					 	    <li class="description">You know ruby and rails inside and out, and enjoy leveraging their cool quirks.</li>
+					 	    <li class="description">You’ve spent some time making the most of NOSQL database servers, particularly Mongodb, and you also have some good ideas about how to work with their limitations.</li>
+					 	    <li class="description">You are keenly aware of how code can get unwieldy, and follow some practices for how to avoid that.</li>
+					 	    <li class="description">The APIs you’ve worked on have served mobile clients.</li>
+					 	    <li class="description">You rock the server side, but you also keep the entire architecture in mind, and can come up with new ways for the client and server to do their dance as smoothly as possible.</li>
+					 	    <li class="description">You can make the rest of our team think of the world in ways that we haven’t considered before.</li>
+					 	    <li class="description">You delve into some HTML, CSS and Javascript, when necessary, without breaking a sweat.</li>
+					 		</ul>
+					 		<h4 style="text-align:left">Extra credit:</h4>
+					 	    <ul class="job-description">
+					 	    	<li class="description">AWS EC2 configuration experience.</li>
+					 	    	<li class="description">iOS and other C programming environments.</li>
+					 	    	<li class="description">BS in Computer Science or related field (or equivalent).</li>
+					 	    </ul>
+					 	    <a href="mailto:jobs@hykoo.co"><button type="button" class="apply"></button></a>
+				  </div>
+			  </div>
+		  </div>
+		 
+
+
+
+
+
+<div id="socialbuttons">
+  <div class="facebook button1">
+  <div class="slide1">
+    <p>
+      facebook
+    </p>
+  </div>
+  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true">
+  </iframe>
+  </div>
+  
+  <div class="twitter button1">
+  <div class="slide1">
+    <p>
+      twitter
+    </p>
+  </div>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="hykooco">
+    Tweet
+  </a>
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+  </div>
+  
+  <div class="google button1">
+  <div class="slide1">
+    <p>
+      google+
+    </p>
+  </div>
+  <!-- Place this tag where you want the +1 button to render. -->
+  <div class="g-plusone" data-size="medium">
+  </div>
+  
+  <!-- Place this tag after the last +1 button tag. -->
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script');
+      po.type = 'text/javascript';
+      po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(po, s);
+    }
+    )();
+  </script>
+  </div>
+  
+  
+  <div class="linkedin button1">
+  <div class="slide1">
+    <p>
+      linkedin
+    </p>
+  </div>
+  <script type="IN/Share" data-counter="right">
+  </script>
+  <script src="//platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+  </script>
+  </div>
+</div>
+
+
+
+
+	  
+	
+	 <!-- GET IT 
+	     ================================================== -->
+	  <section class="get-it">
+	  	<div class="container">
+	  		<div class="row">
+	  			
+	  			<div class="col-md-12">
+	  				<hr/>
+	                <p>Copyright &copy; 2014 Hykoo, Inc</p>
+	                <ul>
+	                	<li><a href="terms_of_use.html" target="_blank">Terms of Use</a></li>
+	                	<li><a href="privacy_policy.html" target="_blank">Privacy policy</a></li>
+	                	<li><a href="#" target="_blank">Press</a></li>
+	                	<li><a href="#">Careers</a></li>
+	                	<li><a href="faq.html" target="_blank">FAQ</a></li>
+                	</ul>
+	  			</div>
+	  		</div>
+	  	</div>
+	  </section>
+	  
+	 
+	 <!-- JAVASCRIPT
+	     ================================================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animatescroll.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/retina.min.js"></script>
+
+  	
+</html>
